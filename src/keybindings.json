@@ -1,0 +1,93 @@
+[
+  // window
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.navigateLeft",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w j",
+    "command": "workbench.action.navigateDown",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "workbench.action.navigateUp",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.navigateRight",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w shift+\\",
+    "command": "workbench.action.splitEditorRight",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w oem_minus",
+    "command": "workbench.action.splitEditorDown",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w d",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  // sidebar
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert' && !terminalFocus"
+  },
+  {
+    "key": "space e",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.focusSideBar"
+      ]
+    },
+    "when": "!explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert' && !terminalFocus"
+  },
+  // editor
+  {
+    "key": "space w",
+    "command": "workbench.action.files.save",
+    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus"
+  },
+  {
+    "key": "space /",
+    "command": "editor.action.commentLine",
+    "when": "vim.active && editorTextFocus && vim.mode != 'Insert' && !terminalFocus"
+  },
+  // buffer
+  {
+    "key": "space d",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus"
+  },
+  {
+    "key": "space [",
+    "command": "workbench.action.previousEditor",
+    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus && !terminalFocus"
+  },
+  {
+    "key": "space ]",
+    "command": "workbench.action.nextEditor",
+    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus"
+  },
+  // term
+  {
+    "key": "space t t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus"
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminalFocus"
+  }
+]
