@@ -25,22 +25,6 @@
   },
   "vim.insertModeKeyBindings": [{ "before": ["j", "k"], "after": ["<Esc>"] }],
   "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<leader>", "["],
-      "commands": ["workbench.action.previousEditor"]
-    },
-    {
-      "before": ["<leader>", "]"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
-      "before": ["<leader>", "f", "f"],
-      "commands": [{ "command": "workbench.action.quickOpen" }]
-    },
-    {
-      "before": ["<leader>", "t", "t"],
-      "commands": ["workbench.action.togglePanel"]
-    },
     { "before": ["g", "r"], "commands": ["editor.action.revealDefinition"] },
     { "before": ["g", "k"], "commands": ["editor.action.showHover"] },
     { "before": ["g", "a"], "commands": ["editor.action.quickFix"] },
@@ -55,35 +39,7 @@
     { "before": ["x"], "after": ["\"", "_", "x"] },
     { "before": ["d", "d"], "after": ["\"", "_", "d", "d"] },
     { "before": ["D"], "after": ["d", "d"] },
-    { "before": ["<leader>", "w"], "commands": [":w"] },
-    {
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
-    },
-    {
-      "before": ["<leader>", "w"],
-      "commands": ["workbench.action.files.save"]
-    },
-    {
-      "before": ["<leader>", "/"],
-      "commands": ["editor.action.commentLine"]
-    },
-    {
-      "before": ["<leader>", "d"],
-      "commands": ["workbench.action.closeActiveEditor"]
-    },
-    {
-      "before": ["<leader>", "["],
-      "commands": ["workbench.action.previousEditor"]
-    },
-    {
-      "before": ["<leader>", "]"],
-      "commands": ["workbench.action.nextEditor"]
-    },
-    {
-      "before": ["<leader>", "t", "t"],
-      "commands": ["workbench.action.terminal.toggleTerminal"]
-    }
+    { "before": ["<leader>", "w"], "commands": [":w"] }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["k"], "after": ["g", "k"] },
@@ -148,6 +104,12 @@
 
   // GitHub Copilot settings
   "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
 
   // Markdown settings
   "[markdown]": {
