@@ -25,31 +25,24 @@
   },
   "vim.insertModeKeyBindings": [{ "before": ["j", "k"], "after": ["<Esc>"] }],
   "vim.normalModeKeyBindingsNonRecursive": [
-    { "before": ["g", "r"], "commands": ["editor.action.revealDefinition"] },
-    { "before": ["g", "k"], "commands": ["editor.action.showHover"] },
-    { "before": ["g", "a"], "commands": ["editor.action.quickFix"] },
     { "before": ["k"], "after": ["g", "k"] },
     { "before": ["j"], "after": ["g", "j"] },
     { "before": ["K"], "after": ["1", "0", "k"] },
     { "before": ["J"], "after": ["1", "0", "j"] },
-    { "before": ["H"], "after": ["b"] },
-    { "before": ["L"], "after": ["w"] },
-    { "before": ["<C-h>"], "after": ["0"] },
-    { "before": ["<C-l>"], "after": ["$"] },
+    { "before": ["H"], "after": ["0"] },
+    { "before": ["L"], "after": ["$"] },
     { "before": ["x"], "after": ["\"", "_", "x"] },
     { "before": ["d", "d"], "after": ["\"", "_", "d", "d"] },
-    { "before": ["D"], "after": ["d", "d"] },
-    { "before": ["<leader>", "w"], "commands": [":w"] }
+    { "before": ["D"], "after": ["\"", "_", "D"] },
+    { "before": ["<leader>", "d", "d"], "after": ["d", "d"] }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     { "before": ["k"], "after": ["g", "k"] },
     { "before": ["j"], "after": ["g", "j"] },
     { "before": ["K"], "after": ["1", "0", "k"] },
     { "before": ["J"], "after": ["1", "0", "j"] },
-    { "before": ["H"], "after": ["b"] },
-    { "before": ["L"], "after": ["w"] },
-    { "before": ["<C-h>"], "after": ["0"] },
-    { "before": ["<C-l>"], "after": ["$"] }
+    { "before": ["H"], "after": ["0"] },
+    { "before": ["L"], "after": ["$"] }
   ],
   "vim.hlsearch": true,
   "vim.useSystemClipboard": true,
@@ -119,5 +112,10 @@
       "strings": "off",
       "other": "off"
     }
+  },
+  "github.copilot.chat.terminalChatLocation": "terminal",
+  "github.copilot.chat.experimental.codeGeneration.instructions": [],
+  "github.copilot.advanced": {
+    "authProvider": "github"
   }
 }
