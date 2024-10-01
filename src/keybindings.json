@@ -35,55 +35,58 @@
     "command": "workbench.action.closeActiveEditor",
     "when": "vim.active && vim.mode != 'Insert'"
   },
+
   // sidebar
+  //explorer
   {
     "key": "space e",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert' && !terminalFocus"
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled && !explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
+  },
+
+  // copilot
+  {
+    "key": "space c c",
+    "command": "workbench.panel.chat.view.copilot.focus",
+    "when": "viewContainer.workbench.view.explorer.enabled && !explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
   },
   {
-    "key": "space e",
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.action.focusSideBar"
-      ]
-    },
-    "when": "!explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert' && !terminalFocus"
+    "key": "escape",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible"
   },
   // editor
   {
     "key": "space w",
     "command": "workbench.action.files.save",
-    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus"
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
   },
   {
     "key": "space /",
     "command": "editor.action.commentLine",
-    "when": "vim.active && editorTextFocus && vim.mode != 'Insert' && !terminalFocus"
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && editorTextFocus && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
   },
   // buffer
   {
     "key": "space d",
     "command": "workbench.action.closeActiveEditor",
-    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus"
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
   },
   {
     "key": "space [",
     "command": "workbench.action.previousEditor",
-    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus && !terminalFocus"
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
   },
   {
     "key": "space ]",
     "command": "workbench.action.nextEditor",
-    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus"
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
   },
   // term
   {
     "key": "space t t",
     "command": "workbench.action.terminal.toggleTerminal",
-    "when": "vim.active && vim.mode != 'Insert' && !terminalFocus"
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
   },
   {
     "key": "escape",
