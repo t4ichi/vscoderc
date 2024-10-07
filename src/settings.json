@@ -1,4 +1,5 @@
 {
+  "window.newWindowDimensions": "maximized",
   // Editor settings
   "editor.lineNumbers": "on",
   "editor.tabSize": 2,
@@ -103,6 +104,11 @@
     "markdown": false,
     "scminput": false
   },
+  "github.copilot.chat.terminalChatLocation": "terminal",
+  "github.copilot.chat.experimental.codeGeneration.instructions": [],
+  "github.copilot.advanced": {
+    "authProvider": "github"
+  },
 
   // Markdown settings
   "[markdown]": {
@@ -112,10 +118,5 @@
       "strings": "off",
       "other": "off"
     }
-  },
-  "github.copilot.chat.terminalChatLocation": "terminal",
-  "github.copilot.chat.experimental.codeGeneration.instructions": [],
-  "github.copilot.advanced": {
-    "authProvider": "github"
   }
 }
