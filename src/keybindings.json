@@ -1,133 +1,127 @@
-{
-  "window.newWindowDimensions": "maximized",
-  // Editor settings
-  "editor.lineNumbers": "on",
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": false,
-  "editor.autoIndent": "full",
-  "editor.rulers": [80, 120],
-  "editor.renderWhitespace": "boundary",
-  "editor.minimap.enabled": false,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {},
-  "editor.inlineSuggest.enabled": true,
-  "editor.unicodeHighlight.nonBasicASCII": false,
-  "editor.unicodeHighlight.invisibleCharacters": false,
-  "editor.unicodeHighlight.ambiguousCharacters": false,
-
-  // Vim settings
-  "vim.leader": "<space>",
-  "vim.handleKeys": {
-    "<C-f>": false,
-    "<C-w>": false
+[
+  // window
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.navigateLeft",
+    "when": "vim.active && vim.mode != 'Insert'"
   },
-  "vim.insertModeKeyBindings": [{ "before": ["j", "k"], "after": ["<Esc>"] }],
-  "vim.normalModeKeyBindingsNonRecursive": [
-    { "before": ["k"], "after": ["g", "k"] },
-    { "before": ["j"], "after": ["g", "j"] },
-    { "before": ["K"], "after": ["1", "0", "k"] },
-    { "before": ["J"], "after": ["1", "0", "j"] },
-    { "before": ["H"], "after": ["0"] },
-    { "before": ["L"], "after": ["$"] },
-    { "before": ["x"], "after": ["\"", "_", "x"] },
-    { "before": ["d", "d"], "after": ["\"", "_", "d", "d"] },
-    { "before": ["D"], "after": ["\"", "_", "D"] },
-    { "before": ["<leader>", "d", "d"], "after": ["d", "d"] },
-    { "before": ["g", "k"], "commands": ["editor.action.showHover"] },
-    { "before": ["g", "f"], "commands": ["editor.action.formatDocument"] },
-    { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] },
-    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
-    { "before": ["g", "D"], "commands": ["editor.action.revealDeclaration"] },
-    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
-    { "before": ["g", "t"], "commands": ["editor.action.goToTypeDefinition"] },
-    { "before": ["g", "n"], "commands": ["editor.action.rename"] },
-    { "before": ["g", "a"], "commands": ["editor.action.quickFix"] },
-    { "before": ["g", "e"], "commands": ["editor.action.showHover"] },
-    { "before": ["g", "]"], "commands": ["editor.action.marker.next"] },
-    { "before": ["g", "["], "commands": ["editor.action.marker.prev"] }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    { "before": ["k"], "after": ["g", "k"] },
-    { "before": ["j"], "after": ["g", "j"] },
-    { "before": ["K"], "after": ["1", "0", "k"] },
-    { "before": ["J"], "after": ["1", "0", "j"] },
-    { "before": ["H"], "after": ["0"] },
-    { "before": ["L"], "after": ["$"] }
-  ],
-  "vim.hlsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.matchpairs": "(:),{:},[:],<:>",
-  "vim.showcmd": true,
-  "vim.autoindent": true,
-  "vim.visualstar": true,
-  "vim.incsearch": true,
-  "vim.useCtrlKeys": true,
-
-  // Workbench settings
-  "workbench.iconTheme": "ayu",
-  "workbench.colorTheme": "Ayu Mirage Bordered",
-  "workbench.statusBar.visible": true,
-  "workbench.settings.applyToAllProfiles": [],
-  // Terminal settings
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-  "terminal.integrated.fontFamily": "MesloLGS NF",
-  "terminal.integrated.fontSize": 14,
-
-  // Explorer settings
-  "explorer.confirmDelete": false,
-
-  // File settings
-  "files.encoding": "utf8",
-  "files.trimTrailingWhitespace": true,
-  "files.autoGuessEncoding": true,
-  "files.autoSaveDelay": 1000,
-  "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/*.swp": true,
-    "**/*.swo": true
+  {
+    "key": "ctrl+w j",
+    "command": "workbench.action.navigateDown",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "workbench.action.navigateUp",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.navigateRight",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w shift+\\",
+    "command": "workbench.action.splitEditorRight",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w oem_minus",
+    "command": "workbench.action.splitEditorDown",
+    "when": "vim.active && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+w d",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "vim.active && vim.mode != 'Insert'"
   },
 
-  // Search settings
-  "search.smartCase": true,
-
-  // Security settings
-  "security.workspace.trust.untrustedFiles": "open",
-
-  // Git settings
-  "git.autofetch": true,
-
-  // Live Preview settings
-  "livePreview.debugOnExternalPreview": true,
-  "livePreview.notifyOnOpenLooseFile": false,
-
-  // GitHub Copilot settings
-  "github.copilot.editor.enableAutoCompletions": true,
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
-  "github.copilot.chat.terminalChatLocation": "terminal",
-  "github.copilot.chat.experimental.codeGeneration.instructions": [],
-  "github.copilot.advanced": {
-    "authProvider": "github"
+  // sidebar
+  //explorer
+  {
+    "key": "space e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled && !explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
   },
 
-  // Markdown settings
-  "[markdown]": {
-    "editor.wordWrap": "on",
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "strings": "off",
-      "other": "off"
-    }
+  // copilot
+  {
+    "key": "space c c",
+    "command": "workbench.panel.chat.view.copilot.focus",
+    "when": "viewContainer.workbench.view.explorer.enabled && !explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarVisible"
+  },
+  // editor
+  {
+    "key": "space w",
+    "command": "workbench.action.files.save",
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
+  },
+  {
+    "key": "space /",
+    "command": "editor.action.commentLine",
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && editorTextFocus && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
+  },
+  // buffer
+  {
+    "key": "space d",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
+  },
+  {
+    "key": "space [",
+    "command": "workbench.action.previousEditor",
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
+  },
+  {
+    "key": "space ]",
+    "command": "workbench.action.nextEditor",
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
+  },
+  // term
+  {
+    "key": "space t t",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "!searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.active && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminalFocus"
+  },
+  // suggest
+  // 補完候補の選択
+  {
+    "key": "ctrl+o",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  // QuickOpenでの選択
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.acceptSelectedQuickOpenItem",
+    "when": "inQuickOpen"
+  },
+  // コードアクション（QuickFix含む）での選択
+  {
+    "key": "ctrl+o",
+    "command": "acceptSelectedCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  // リファクタリングメニューでの選択
+  {
+    "key": "ctrl+o",
+    "command": "refactorPreview.apply",
+    "when": "refactorPreview.enabled && refactorPreview.hasCheckedChanges"
+  },
+  // エラーポップアップでの選択
+  {
+    "key": "ctrl+o",
+    "command": "acceptSelectedParameterHint",
+    "when": "editorTextFocus && parameterHintsVisible"
   }
-}
+]
