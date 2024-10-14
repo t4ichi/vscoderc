@@ -43,7 +43,16 @@
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled && !explorerViewletVisible && !searchViewletVisible && !inDebugMode && vim.mode != 'SearchInProgressMode' && vim.mode != 'Insert' && !terminalFocus && !view.workbench.panel.chat.view.copilot.visible"
   },
-
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
   // copilot
   {
     "key": "space c c",
@@ -92,36 +101,5 @@
     "key": "escape",
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "terminalFocus"
-  },
-  // suggest
-  // 補完候補の選択
-  {
-    "key": "ctrl+o",
-    "command": "acceptSelectedSuggestion",
-    "when": "suggestWidgetVisible && textInputFocus"
-  },
-  // QuickOpenでの選択
-  {
-    "key": "ctrl+o",
-    "command": "workbench.action.acceptSelectedQuickOpenItem",
-    "when": "inQuickOpen"
-  },
-  // コードアクション（QuickFix含む）での選択
-  {
-    "key": "ctrl+o",
-    "command": "acceptSelectedCodeAction",
-    "when": "codeActionMenuVisible"
-  },
-  // リファクタリングメニューでの選択
-  {
-    "key": "ctrl+o",
-    "command": "refactorPreview.apply",
-    "when": "refactorPreview.enabled && refactorPreview.hasCheckedChanges"
-  },
-  // エラーポップアップでの選択
-  {
-    "key": "ctrl+o",
-    "command": "acceptSelectedParameterHint",
-    "when": "editorTextFocus && parameterHintsVisible"
   }
 ]
